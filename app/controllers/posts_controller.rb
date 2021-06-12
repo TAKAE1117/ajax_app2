@@ -9,6 +9,7 @@ class PostsController < ApplicationController
   end
 
   def checked
+    binding.pry
     post = Post.find(params[:id])
     if post.checked               #既読であるか否かを判定するプロパティを指定する
       post.update(checked: false) #既読を解除するためにfalseへ変更
