@@ -6,6 +6,7 @@ function check() {
       const XHR = new XMLHttpRequest();
       XHR.open("GET", `/posts/${postId}`, true);
       XHR.responseType = "json";
+      XHR.send();
     });
   });
 }
