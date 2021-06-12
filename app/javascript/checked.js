@@ -4,6 +4,7 @@ function check() {
     post.addEventListener("click", () => {
       const postId = post.getAttribute("data-id");
       const XHR = new XMLHttpRequest();
+      XHR.open("GET", `/posts/${postId}`, true);
     });
   });
 }
