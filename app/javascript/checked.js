@@ -5,6 +5,7 @@ function check() {
       const postId = post.getAttribute("data-id");
       const XHR = new XMLHttpRequest();
       XHR.open("GET", `/posts/${postId}`, true);
+      XHR.responseType = "json";
     });
   });
 }
